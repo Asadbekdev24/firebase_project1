@@ -24,7 +24,8 @@ class AuthService {
      try{
 
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(email: email, password: password);
-
+      final id=userCredential.user;
+      
       return userCredential.user;
 
      }catch(e)
